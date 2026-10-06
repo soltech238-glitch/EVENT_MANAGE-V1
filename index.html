@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tandav Events | Sound • Lights • Decoration</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<section id="loginPage" class="login-wrap">
+  <div class="login-bg" data-bg="hero"></div>
+  <form id="loginForm" class="login-card" autocomplete="off">
+    <div class="logo-big">T<span>E</span></div>
+    <h1>TANDAV <small>EVENTS</small></h1>
+    <p class="tag">Your Event, Our Responsibility!</p>
+    <label>Admin ID<input type="text" id="loginId" autocapitalize="none" autocorrect="off" spellcheck="false" placeholder="Enter ID" required></label>
+    <label>Password<input type="password" id="loginPass" placeholder="Enter password" required></label>
+    <p id="loginErr" class="err"></p>
+    <button class="btn" type="submit">Login</button>
+  </form>
+</section>
+
+<!-- MAIN SITE -->
+<div id="site" class="hidden">
+  <header class="nav">
+    <div class="brand"><span class="logo">T<b>E</b></span> TANDAV <em>EVENTS</em></div>
+    <button class="burger" id="burger" aria-label="Menu">☰</button>
+    <nav id="menu">
+      <a href="#" data-page="about" class="active">About</a>
+      <a href="#" data-page="services">Services</a>
+      <a href="#" data-page="inquiry">Inquiry</a>
+      <a href="#" data-page="contact">Contact Us</a>
+      <a href="#" id="logout" class="logout">Logout</a>
+    </nav>
+  </header>
+
+  <!-- ABOUT -->
+  <main id="about" class="page show">
+    <div class="hero" data-bg="hero">
+      <div class="hero-in">
+        <p class="eyebrow">Sound | Lights | Decoration</p>
+        <h1>TANDAV <span>EVENTS</span></h1>
+        <p class="lead">Your Event, Our Responsibility!</p>
+        <a href="#" class="btn" data-page="inquiry">Book Now</a>
+      </div>
+    </div>
+    <div class="wrap">
+      <h2 class="title">About Us</h2>
+      <p class="about-text">Tandav Events creates unforgettable moments with powerful sound, stunning lights and spectacular stage effects. From weddings and corporate events to concerts and parties, our experienced team delivers premium quality equipment, safe and reliable service, and solutions customized to your event.</p>
+      <div class="stats">
+        <div><b data-count="500">0</b><span>+ Events Done</span></div>
+        <div><b data-count="5">0</b><span>Special Effects</span></div>
+        <div><b data-count="100">0</b><span>% Safe Service</span></div>
+        <div><b data-count="24">0</b><span>/7 Support</span></div>
+      </div>
+      <h2 class="title">Our Work &amp; Services</h2>
+      <div class="grid" id="aboutGrid"></div>
+      <h2 class="title">Why Choose Us</h2>
+      <div class="why">
+        <div class="card"><i>🏅</i><h3>Premium Equipment</h3><p>Top quality machines for flawless effects.</p></div>
+        <div class="card"><i>👥</i><h3>Experienced Team</h3><p>Trained professionals at every event.</p></div>
+        <div class="card"><i>🛡️</i><h3>Safe &amp; Reliable</h3><p>Safety first, on-time every time.</p></div>
+        <div class="card"><i>🤝</i><h3>Customized Solutions</h3><p>Packages designed around your needs.</p></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- SERVICES -->
+  <main id="services" class="page">
+    <div class="wrap">
+      <h2 class="title">Our Services</h2>
+      <div class="grid" id="servicesGrid"></div>
+      <p class="center note">Available for Weddings | Corporate Events | Concerts | Parties &amp; More</p>
+    </div>
+  </main>
+
+  <!-- INQUIRY -->
+  <main id="inquiry" class="page">
+    <div class="wrap narrow">
+      <h2 class="title">Inquiry Form</h2>
+      <form id="inqForm" class="form" novalidate>
+        <div class="row">
+          <label>Full Name *<input name="Name" required placeholder="Your name"></label>
+          <label>Mobile Number *<input name="Phone" type="tel" required placeholder="10 digit mobile" pattern="[0-9+ ]{10,14}"></label>
+        </div>
+        <div class="row">
+          <label>Email *<input name="Email" type="email" required placeholder="you@example.com"></label>
+          <label>Event Type *
+            <select name="Event Type" required>
+              <option value="">Select</option><option>Wedding</option><option>Corporate Event</option>
+              <option>Concert</option><option>Party</option><option>Other</option>
+            </select></label>
+        </div>
+        <div class="row">
+          <label>Event Date *<input name="Event Date" type="date" required></label>
+          <label>Event Location *<input name="Location" required placeholder="City / Venue"></label>
+        </div>
+        <div class="row">
+          <label>Expected Guests<input name="Guests" type="number" min="1" placeholder="e.g. 300"></label>
+          <label>Budget (optional)<input name="Budget" placeholder="e.g. ₹20,000"></label>
+        </div>
+        <fieldset>
+          <legend>Services Required *</legend>
+          <div class="checks" id="checks"></div>
+        </fieldset>
+        <label>Message / Special Requirements<textarea name="Message" rows="4" placeholder="Tell us more about your event..."></textarea></label>
+        <p id="formMsg" class="msg"></p>
+        <button class="btn" id="sendBtn" type="submit">Submit Inquiry</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- CONTACT -->
+  <main id="contact" class="page">
+    <div class="wrap">
+      <h2 class="title">Contact Us</h2>
+      <div class="why">
+        <div class="card"><i>📞</i><h3>Book Now</h3><p><a href="tel:+918862087966">+91 8862087966</a></p></div>
+        <div class="card"><i>✉️</i><h3>Email</h3><p>Send an inquiry via the Inquiry page</p></div>
+        <div class="card"><i>📱</i><h3>Follow Us</h3><p>Facebook • Instagram • WhatsApp • YouTube<br>/Tandav Events</p></div>
+        <div class="card"><i>📍</i><h3>We Serve</h3><p>Weddings, Corporate Events, Concerts, Parties &amp; More</p></div>
+      </div>
+      <div class="offer">
+        <h3>Book Now &amp; Get</h3>
+        <p>✔ Best Rates &nbsp; ✔ Exclusive Discounts &nbsp; ✔ Limited Time Offer</p>
+        <a class="btn" href="tel:+918862087966">Call +91 8862087966</a>
+        <a class="btn ghost" href="https://wa.me/918862087966" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>Because Every Event Deserves a Tandav &nbsp;|&nbsp; © Tandav Events</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
